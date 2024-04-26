@@ -1,0 +1,151 @@
+/* Reset default styles */
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set font family and background color */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Define a camada de fundo */
+    background-image: url('7708.jpg');
+    background-size: cover; /* Cobrir toda a área do elemento */
+    background-position: center; /* Centralizar a imagem */
+    filter: blur(7.5px); /* Aplicar efeito de desfoque */
+}
+
+/* Estilo para o conteúdo */
+.content {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo esteja sobreposto à imagem de fundo */
+}
+
+/* Center the h1 element */
+h1 {
+    text-align: center;
+    margin: 20px auto;
+    color: black;
+    padding: 10px;
+    width: 25%; /* Define a largura de cada célula para 25% */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    background-color: #e9e9e9;
+    font-weight: bold;
+}
+
+/* Imagem de fundo para o título */
+h1.background-title {
+    background-image: url('https://s2-cartola.glbimg.com/uaHXPuTZ9Amma-bzv4psSk24a1A=/https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_226/flamula/30/22/36/00331653020240413152236');
+    background-size: 50px ;
+    background-position: left;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1; /* Certifica-se de que o texto esteja na frente da imagem de fundo */
+}
+
+/* Imagem de fundo à direita do título */
+h1.background-title::after {
+    content: ''; /* Adiciona conteúdo pseudo-elemento */
+    position: absolute; /* Torna o pseudo-elemento um elemento de posição absoluta */
+    top: 0; /* Posiciona o pseudo-elemento no topo */
+    right: 0px; /* Posiciona o pseudo-elemento à direita do título */
+    width: 50px; /* Define a largura do pseudo-elemento */
+    height: 100%; /* Estende o pseudo-elemento até a altura do título */
+    background-image: url('https://s2-cartola.glbimg.com/uaHXPuTZ9Amma-bzv4psSk24a1A=/https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_226/flamula/30/22/36/00331653020240413152236');
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1; /* Move a imagem de fundo para trás do texto do título */
+}
+
+/* Style the table */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: separate; /* Adiciona bordas separadas */
+    border: 10px solid #e9e9e9; /* Adiciona uma borda escura */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    font-size: 16pt;
+}
+
+/* Style table headers */
+th, td {
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap; /* Evita a quebra de linha automática */
+}
+
+
+/* Header background color */
+th, td {
+    background-color: rgba(233, 233, 233, 0.9); /* Define a cor de fundo com transparência */
+    font-weight: bold;
+}
+
+/* Estiliza as células com as imagens dos escudos */
+th img {
+    max-width: 40px; /* Largura máxima dos escudos */
+    height: auto;
+    vertical-align: middle; /* Centraliza verticalmente com a linha da tabela */
+}
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    /* Estilos para telas menores que 600px de largura (dispositivos móveis) */
+    .team .team-name {
+        display: none;
+    }
+    /* Ajustar tamanho do texto */
+    th, td {
+        font-size: 14px;
+        vertical-align: middle;
+        height: 20px;
+    }
+
+    /* Ajustar a largura das células para 50% da largura da tela */
+    th, td {
+        width:30%;
+    }
+
+    /* Estiliza as células com as imagens dos escudos */
+    th img {
+        max-width: 35px; /* Largura máxima dos escudos */
+        height: auto;
+        vertical-align: middle; /* Centraliza verticalmente com a linha da tabela */
+    }
+
+    /* Ajustar o tamanho do título para dispositivos móveis */
+    h1 {
+        width: 80%;
+        font-size: 18px; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    }
+
+    /* Imagem de fundo para o título */
+    h1.background-title {
+        background-size: 40px ; /* Ajusta o tamanho da imagem de fundo */
+    }
+
+    /* Imagem de fundo à direita do título */
+    h1.background-title::after {
+        width: 38px; /* Define a largura do pseudo-elemento */
+        background-size: 40px; /* Ajusta o tamanho da imagem de fundo */
+    }
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Define a camada de fundo */
+        background-image: url('7708.jpg');
+        background-size: cover; /* Cobrir toda a área do elemento */
+        background-position: center; /* Centralizar a imagem */
+        filter: blur(2px); /* Aplicar efeito de desfoque */
+    }
+}
