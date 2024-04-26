@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontuações dos Times</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="background"></div> <!-- Div para a imagem de fundo -->
+    <div class="content">
+        <h1 class="background-title">Liga Tio Jurandi</h1>
+        <table id="pontuacoes-table">
+            <thead>
+                <tr>
+                    <th>Rodadas</th>
+                    <th><img src="https://s2-cartola.glbimg.com/xOzjMYHTOXd_Tmnhd6J8DZYH-vE=/https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_226/escudo/46/01/02/00cbb4166c-9c42-4bf6-af45-d2ddc79b484620240413130102" alt="Escudo do Sundae JR"> Sundae JR</th>
+                    <th><img src="https://s2-cartola.glbimg.com/jgxkdY4TwhYH6WWkOu4qxd9wBWo=/https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_226/escudo/03/07/25/0067c8b57d-67c1-428b-8058-a45c15f2ca0320240413150725" alt="Escudo do Pupu AC"> Pupu AC</th>
+                    <th><img src="https://s2-cartola.glbimg.com/o-bt-oy5Xpp0It-9hkcyPyRPfSo=/https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_225/escudo/75/16/57/000d71e310-3757-4c37-a9e0-0689c823e87520240411171657" alt="Escudo do Csarte"> Csarte</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rodada in rodadas %}
+                <tr>
+                    <td>{{ rodada }}</td>
+                    <td>{{ pontos[rodada]['48930150'] }}</td>
+                    <td>{{ pontos[rodada]['14652233'] }}</td>
+                    <td>{{ pontos[rodada]['47992511'] }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td>Pontuação Total</td>
+                    <td>{{ totais['48930150'] }}</td>
+                    <td>{{ totais['14652233'] }}</td>
+                    <td>{{ totais['47992511'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
