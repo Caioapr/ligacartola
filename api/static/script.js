@@ -23,4 +23,4 @@ function atualizarTabela() {
 document.addEventListener('DOMContentLoaded', atualizarTabela);
 
 // Atualizar a tabela a cada 10 segundos
-setInterval(atualizarTabela, 60000);
+setInterval(atualizarTabela, 12000000);
